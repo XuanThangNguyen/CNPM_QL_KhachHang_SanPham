@@ -355,44 +355,39 @@ INSERT INTO ChiTietHoaDonNhapHang VALUES ('HDNH002','SP0723000003',30,1800000);
 INSERT INTO ChiTietHoaDonNhapHang VALUES ('HDNH004','SP0723000001',30,390000);
 INSERT INTO ChiTietHoaDonNhapHang VALUES ('HDNH004','SP0723000010',23,20000000);
 
---CREATE TABLE QuangCao (
---	IdQuangCao VARCHAR(12) NOT NULL,
---	TenQuangCao NVARCHAR(255) NOT NULL,
---	MoTaQuangCao NVARCHAR(255),
---	NgayBatDau DATE,
---	NgayKetThuc DATE,
---	IdSanPham VARCHAR(12) NOT NULL,
---	CONSTRAINT PK_QuangCao PRIMARY KEY(IdQuangCao),
---	CONSTRAINT FK_QuangCao_SanPham FOREIGN KEY(IdSanPham) REFERENCES SanPham(IdSanPham)
---);
+CREATE TABLE QuangCao (
+	IdQuangCao VARCHAR(12) NOT NULL,
+	TenQuangCao NVARCHAR(255) NOT NULL,
+	MoTaQuangCao NVARCHAR(255),
+	IdSanPham VARCHAR(12) NOT NULL,
+	NgayBatDau DATE,
+	NgayKetThuc DATE,
+	KenhQuangCao VARCHAR(12) NOT NULL,
+	CONSTRAINT PK_QuangCao PRIMARY KEY(IdQuangCao),
+	CONSTRAINT FK_QuangCao_SanPham FOREIGN KEY(IdSanPham) REFERENCES SanPham(IdSanPham)
+);
+SET DATEFORMAT DMY
+ INSERT INTO QuangCao VALUES ('QC001',N'Áo Hoodie Unisex',N'Giảm 15%','SP0723000001','10-10-2023','10-11-2023',N'VTV')
+ INSERT INTO QuangCao VALUES ('QC002',N'Áo Vest Blazer',N'Giảm 15%','SP0723000002','10-10-2023','10-11-2023',N'VTV')
+ INSERT INTO QuangCao VALUES ('QC003',N'Đầm Ôm Ren Hoa',N'Giảm 15%','SP0723000003','10-10-2023','10-11-2023',N'VTV')
+ INSERT INTO QuangCao VALUES ('QC004',N'Đầm Quây Cúp Ngực Đỏ',N'Giảm 15%','SP0723000004','10-10-2023','10-11-2023',N'VTV')
+ SELECT*FROM QUANGCAO
 
---CREATE TABLE ChienDichQuangCao (
---	IdChienDich VARCHAR(12) NOT NULL,
---	TenChienDich NVARCHAR(255) NOT NULL,
---	IdQuangCao VARCHAR(12) NOT NULL,
---	CONSTRAINT PK_ChienDichQuangCao PRIMARY KEY(IdChienDich),
---	CONSTRAINT FK_ChienDichQuangCao_QuangCao FOREIGN KEY(IdQuangCao) REFERENCES QuangCao(IdQuangCao)
---);
 
---CREATE TABLE ChiTietChienDichQuangCao (
---	IdChiTietChienDich VARCHAR(12) NOT NULL,
---	IdChienDich VARCHAR(12) NOT NULL,
---	KenhQuangCao VARCHAR(12) NOT NULL,
---	SoLuotXem INT,
---	SoLuotClick INT,
---	CONSTRAINT PK_ChiTietChienDichQuangCao PRIMARY KEY(IdChiTietChienDich),
---	CONSTRAINT FK_ChiTietChienDichQuangCao_ChienDichQuangCao FOREIGN KEY(IdChienDich) REFERENCES ChienDichQuangCao(IdChienDich)
---);
+CREATE TABLE YkienKH
+(
+	IdFeedback VARCHAR(10) NOT NULL,
+	IdKhachHang VARCHAR(12) NOT NULL,
+	NgayYkien DATE,
+	NDYkien NVARCHAR(150),
+	CONSTRAINT PK_YkienKH PRIMARY KEY(IdFeedback),
+	CONSTRAINT FK_YKienKH_KhachHang FOREIGN KEY(IdKhachHang) REFERENCES KhachHang(IdKhachHang)
+)
+INSERT INTO YkienKH (IdFeedback, IdKhachHang, NgayYkien, NDYkien)
+VALUES ('F001', 'KH001', '2023-12-01', 'This is the customer feedback.');
 
---CREATE TABLE YkienKH
---(
---	IdFeedback VARCHAR(10) NOT NULL,
---	IdKhachHang VARCHAR(12) NOT NULL,
---	NgayYkien DATE,
---	NDYkien NVARCHAR(150),
---	CONSTRAINT PK_YkienKH PRIMARY KEY(IdFeedback),
---	CONSTRAINT FK_YKienKH_KhachHang FOREIGN KEY(IdKhachHang) REFERENCES KhachHang(IdKhachHang)
---)
+INSERT INTO YkienKH (IdFeedback, IdKhachHang, NgayYkien, NDYkien)
+VALUES ('F002', 'KH002', '2023-12-02', 'Another customer opinion.');
 
 CREATE VIEW BangChi AS
 SELECT 
