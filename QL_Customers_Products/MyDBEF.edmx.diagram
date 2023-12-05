@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aff060cadedd466990008ac5be9c361d" Name="Diagram1">
+        <EntityTypeShape EntityType="QLKH_SPModel.ChienDichQuangCao" Width="1.5" PointX="9.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.ChiNhanh" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.ChiTietChienDichQuangCao" Width="1.5" PointX="12" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.ChiTietHoaDon" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.ChiTietHoaDonNhapHang" Width="1.5" PointX="10.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.ChucVu" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.HoaDon" Width="1.5" PointX="5.25" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.KhachHang" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.KhoHang" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.LoaiSanPham" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.LoaiSanPhamCha" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.NguoiDung" Width="1.5" PointX="0.75" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.NhaCungCap" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.NhanVien" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.NhapHang" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.QuangCao" Width="1.5" PointX="7.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.QuayThanhToan" Width="1.5" PointX="3" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.SanPham" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.TheThanhVien" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLKH_SPModel.YkienKH" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
+        <AssociationConnector Association="QLKH_SPModel.FK_ChienDichQuangCao_QuangCao" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_ChiTietChienDichQuangCao_ChienDichQuangCao" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_KhoHang_ChiNhanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_QuayThanhToan_ChiNhanh" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_ChiTietHoaDon_HoaDon" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_ChiTietHoaDon_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_ChiTietHoaDonNhapHang_NhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_ChiTietHoaDonNhapHang_NhapHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_ChiTietHoaDonNhapHang_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_NhanVien_ChucVu" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_HoaDon_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_HoaDon_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_HoaDon_QuayThanhToan" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_KhachHang_TheThanhVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_YKienKH_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_KhoHang_IdSanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_LoaiSanPham_LoaiSanPhamCha" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_NhanVien_NguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_NhapHang_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="QLKH_SPModel.FK_QuangCao_SanPham" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
